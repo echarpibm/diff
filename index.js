@@ -150,6 +150,7 @@
 
     if (type === 'object') {
       for (var key in object) {
+        // eslint-disable-next-line no-prototype-builtins
         if (object.hasOwnProperty(key)) {
           var keyValueString = '[ type: object, key: ' + key + ', value hash: ' + getOrderIndependentHash(object[key]) + ']';
           accum += hashThisString(keyValueString);
